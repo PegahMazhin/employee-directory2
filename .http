@@ -1,0 +1,26 @@
+### Test Adding an Employee - Success
+POST http://localhost:3000/employees
+Content-Type: application/json
+
+{
+  "name": "John Doe"
+}
+
+### Test Adding an Employee - Error (No Name Provided)
+POST http://localhost:3000/employees
+Content-Type: application/json
+
+{
+  "name": ""
+}
+
+### Test Adding an Employee - Error (Invalid Name)
+POST http://localhost:3000/employees
+Content-Type: application/json
+
+{
+  "name": 1234
+}
+
+### Test 404 Middleware
+GET http://localhost:3000/nonexistent
